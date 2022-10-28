@@ -2,6 +2,7 @@
 
 #include "Core/PrimeHack/AddressDB.h"
 #include "Core/PrimeHack/HackManager.h"
+#include "Common/Logging/Log.h"
 
 #include "Core/PowerPC/MMU.h"
 
@@ -23,6 +24,7 @@ void PrimeMod::apply_instruction_changes(bool invalidate)  {
   for (CodeChange const& change : active_changes) {
     PowerPC::HostWrite_U32(change.var, change.address);
     if (invalidate) {
+      WARN_LOG_FMT(POWERPC, "Invalidating the address {:#x}", change.address);
       PowerPC::ScheduleInvalidateCacheThreadSafe(change.address);
     }
   }
