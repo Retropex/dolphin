@@ -1,4 +1,4 @@
-# PrimeHack – A Dolphin Emulator fork for Metroid Prime Trilogy
+# PrimeHack – A Dolphin Emulator fork for Metroid Prime Trilogy.
 
 PrimeHack is a modified version of [Dolphin-Emu](https://github.com/dolphin-emu/dolphin) solely for playing Metroid Prime Trilogy for Wii with keyboard and mouse on a PC.
 
